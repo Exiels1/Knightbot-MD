@@ -1,16 +1,71 @@
+/**
+ * Xenofy Bot Configuration Settings
+ * Version: 2.0.0
+ * Bot Name: Xenofy
+ * Branding: Xenofy
+ */
+
 const settings = {
-  packname: 'Knight Bot',
-  author: '‎',
-  botName: "Knight Bot",
-  botOwner: 'Professor', // Your name
-  ownerNumber: '919876543210', //Set your number here without + symbol, just add country code & number without any space
-  giphyApiKey: 'qnl7ssQChTdPjsKta2Ax2LMaGXz303tq',
-  commandMode: "public",
-  maxStoreMessages: 20, 
-  storeWriteInterval: 10000,
-  description: "This is a bot for managing group commands and automating tasks.",
-  version: "2.1.7",
-  updateZipUrl: "https://github.com/mruniquehacker/Knightbot-MD/archive/refs/heads/main.zip",
+  // Bot Identity
+  botName: "Xenofy",
+  version: "2.0.0",
+  branding: "Xenofy",
+  
+  // QR Code Settings
+  qrCode: {
+    enabled: true,
+    displayTimeout: 60000, // milliseconds
+    autoRefresh: true,
+    refreshInterval: 30000, // milliseconds
+    showInConsole: true,
+    terminal: {
+      smallQR: false,
+      legacySessionFile: false
+    }
+  },
+  
+  // Bot Features
+  features: {
+    autoRead: false,
+    autoTyping: true,
+    autoRecorder: false,
+    groupWelcome: true,
+    antiBadword: true,
+    antiLink: false
+  },
+  
+  // Prefix Settings
+  prefix: {
+    main: ".",
+    alternate: ",",
+    wild: "false"
+  },
+  
+  // Session Settings
+  session: {
+    sessionName: "xenofy_session",
+    usePairingCode: true,
+    mobile: false
+  },
+  
+  // Owner Configuration
+  owner: {
+    number: "0",
+    name: "Xenofy Owner"
+  },
+  
+  // Database Settings
+  database: {
+    type: "local",
+    path: "./database"
+  },
+  
+  // Logging
+  logging: {
+    level: "info",
+    includeTimestamp: true,
+    includeConsole: true
+  }
 };
 
 module.exports = settings;
